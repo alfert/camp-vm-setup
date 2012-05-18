@@ -50,12 +50,13 @@ Vagrant::Config.run do |config|
 
     chef.add_role "base"
 
-    chef.add_recipe "jetty"
+    chef.add_recipe "tomcat"
     chef.add_recipe "git"
-    chef.add_recipe "subversion::server"
     chef.add_recipe "nginx"
     chef.add_recipe "memcached"
-  
+    chef.add_recipe "postgresql::server"
+    # chef.add_recipe "subversion::server"
+    
     # You may also specify custom JSON attributes:
     # chef.json = { :mysql_password => "foo" }
   end
