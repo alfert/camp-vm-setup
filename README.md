@@ -3,7 +3,7 @@ VM Setup
 
 This Repository contains some Vagrant VM definitions used with Chef. 
 
-The referenced role "base" contains at least the followind definitions:
+The referenced role "base" contains at least the following definitions:
 
 
 	name "base"
