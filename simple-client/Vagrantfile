@@ -43,8 +43,9 @@ Vagrant::Config.run do |config|
  
   
   config.vm.provision :chef_client do |chef|
-    chef.chef_server_url = "https://api.opscode.com/organizations/ORGNAME"
-    chef.validation_key_path = "ORGNAME-validator.pem"
+    chef.environment = CHEF_ENV
+    chef.chef_server_url = CHEF_URL
+    chef.validation_key_path = CHEF_VALID
 
     chef.add_role "base"
   end
